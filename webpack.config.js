@@ -4,7 +4,7 @@ const devCerts = require("office-addin-dev-certs");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const urlDev = "https://localhost:3000/";
+const urlDev = "https://app-oscar-prod.azurewebsites.net/";
 const urlProd = "https://app-oscar-prod.azurewebsites.net/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 async function getHttpsOptions() {
@@ -13,7 +13,7 @@ async function getHttpsOptions() {
 }
 
 module.exports = async (env, options) => {
-  const dev = options.mode === "production";//"development";
+  const dev = options.mode === "development";
   const config = {
     devtool: "source-map",
     entry: {
