@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const urlDev = "https://localhost:3000/";
-const urlProd = "https://www.contoso.com/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+const urlProd = "https://app-oscar-prod.azurewebsites.net/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 async function getHttpsOptions() {
   const httpsOptions = await devCerts.getHttpsServerOptions();
@@ -13,7 +13,7 @@ async function getHttpsOptions() {
 }
 
 module.exports = async (env, options) => {
-  const dev = options.mode === "development";
+  const dev = options.mode === "production";//"development";
   const config = {
     devtool: "source-map",
     entry: {
