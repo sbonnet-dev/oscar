@@ -1,0 +1,15 @@
+#Site
+https://learn.microsoft.com/en-us/office/dev/add-ins/develop/yeoman-generator-overview
+
+#Install
+npm install -g yo generator-office
+yo office 
+    ==> Select: Office Add-in Task Pane project
+    ==> Select: JavaScript
+    ==> Enter: oscar
+    ==> Select: Word
+
+#Test
+cd ./oscar
+npm install
+npm start
